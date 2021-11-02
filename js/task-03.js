@@ -12,6 +12,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+//for
 // const ulItemEl = document.querySelector('.gallery')
 // for (let i = 0; i < images.length; i += 1) {
 //   const liItemEl = document.createElement('li');
@@ -23,7 +24,25 @@ const images = [
 //   ulItemEl.appendChild(imageEl)
 //   //ulItemEl.append(liItemEl,imageEl)
 // }
-const ulElements = images.map(option => {
+const ulItemElmap = document.querySelector('.gallery')
+//map
+// const ulElements = images.map(option => {
+//   const liItemEl = document.createElement('li');
+//   const imageEl = document.createElement('img');
+//   imageEl.src = option.url;
+//   imageEl.alt = option.alt;
+//   // imageEl.width = 640;
+//   // liItemEl.appendChild(imageEl)
+//   // ulItemEl.appendChild(imageEl)
+//   //ulItemEl.append(liItemEl,imageEl)
+//   liItemEl.appendChild(imageEl)
+//   return liItemEl;
+// })
+// console.log(ulElements)
+// ulItemElmap.append(...ulElements)
+//function
+const makeImages = options => {
+  return options.map(option => {
   const liItemEl = document.createElement('li');
   const imageEl = document.createElement('img');
   imageEl.src = option.url;
@@ -35,6 +54,6 @@ const ulElements = images.map(option => {
   liItemEl.appendChild(imageEl)
   return liItemEl;
 })
-console.log(ulElements)
-const ulItemElmap = document.querySelector('.gallery')
+}
+const ulElements = makeImages(images);
 ulItemElmap.append(...ulElements)
