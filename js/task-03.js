@@ -18,7 +18,7 @@ for (let i = 0; i < images.length; i += 1) {
   const imageEl = document.createElement('img');
   imageEl.src = images[i].url;
   imageEl.alt = images[i].alt;
-  imageEl.width = 640;
+  // imageEl.width = 640;
   liItemEl.appendChild(imageEl)
   ulItemEl.appendChild(imageEl)
 }
