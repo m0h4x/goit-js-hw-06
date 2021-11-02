@@ -12,13 +12,29 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const ulItemEl = document.querySelector('.gallery')
-for (let i = 0; i < images.length; i += 1) {
+// const ulItemEl = document.querySelector('.gallery')
+// for (let i = 0; i < images.length; i += 1) {
+//   const liItemEl = document.createElement('li');
+//   const imageEl = document.createElement('img');
+//   imageEl.src = images[i].url;
+//   imageEl.alt = images[i].alt;
+//   // imageEl.width = 640;
+//   liItemEl.appendChild(imageEl)
+//   ulItemEl.appendChild(imageEl)
+//   //ulItemEl.append(liItemEl,imageEl)
+// }
+const ulElements = images.map(option => {
   const liItemEl = document.createElement('li');
   const imageEl = document.createElement('img');
-  imageEl.src = images[i].url;
-  imageEl.alt = images[i].alt;
+  imageEl.src = option.url;
+  imageEl.alt = option.alt;
   // imageEl.width = 640;
+  // liItemEl.appendChild(imageEl)
+  // ulItemEl.appendChild(imageEl)
+  //ulItemEl.append(liItemEl,imageEl)
   liItemEl.appendChild(imageEl)
-  ulItemEl.appendChild(imageEl)
-}
+  return liItemEl;
+})
+console.log(ulElements)
+const ulItemElmap = document.querySelector('.gallery')
+ulItemElmap.append(...ulElements)
