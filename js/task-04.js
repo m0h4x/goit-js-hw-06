@@ -3,10 +3,10 @@ const buttonInc = document.querySelector("[data-action=increment]")
 buttonDec.addEventListener('click', deButtonClick)
 buttonInc.addEventListener('click', inButtonClick)
 function deButtonClick() {
-    counter.textContent++
+    counterValue.textContent--
 }
 function inButtonClick() {
-    counter.textContent--
+    counterValue.textContent++
 }
-const counter = document.querySelector('span')
-console.log(counter.textContent)
+const counterValue = document.querySelector('span')
+console.log(counterValue.textContent)
